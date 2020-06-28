@@ -9,6 +9,6 @@ class DueDateSort
 
     public function handle()
     {
-        return Order::dueDate()->join('products', 'orders.product_id', '=', 'products.id')->select('orders.*', 'products.name')->paginate(5);
+        return Order::dueDate()->join('products', 'orders.product_id', '=', 'products.id')->select('orders.*', 'products.name')->paginate(50);
     }
 }

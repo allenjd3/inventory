@@ -8,8 +8,8 @@ class DefaultDataSort
 {
     public function handle()
     {
-        return Order::join('products', 'orders.product_id', '=', 'products.id')->select('orders.*', 'products.name')->paginate(5);
-    
+        return Order::join('products', 'orders.product_id', '=', 'products.id')->select('orders.*', 'products.name')->paginate(50);
+
     }
 
 }
