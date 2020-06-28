@@ -36,7 +36,7 @@
                         @auth
                         <li class="nav-item"><a class="nav-link" href="{{route('products.index')}}">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('orders.index')}}">Orders</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('orders.unreceived')}}">Unreceived Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('orders.allorders')}}">View All Orders</a></li>
                         @endauth
 
                     </ul>

@@ -13,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
                     <table class="table table-striped">
                         <thead class="thead-dark">
                             <tr>

@@ -39,7 +39,7 @@ Route::put('/products/{id}', [ProductsController::class, 'update'])->name('produ
 Route::get('/products/{product}', [ ProductsController::class , 'show' ])->name('products.show');
 Route::post('/orders/toggle-receive/{id}', [OrdersController::class, 'togglereceive'])->name('orders.togglereceive');
 Route::get('/orders', [ OrdersController::class, 'index'])->name('orders.index');
-Route::get('/orders/unreceived', [ OrdersController::class, 'unreceived'])->name('orders.unreceived');
+Route::get('/orders/allorders', [ OrdersController::class, 'allorders'])->name('orders.allorders');
 Route::get('/orders/{id}/edit', [OrdersController::class, 'edit'])->name('orders.edit');
 Route::put('/orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 Route::get('/orders/{order}', [ OrdersController::class, 'show'])->name('orders.show');

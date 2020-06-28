@@ -3,19 +3,22 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
+    use SoftDeletes;
+
     protected $guarded = [];
 
     protected $dates = ['due_date'];
     protected $casts = [
-        'received'=>'boolean' 
+        'received'=>'boolean'
     ];
 
     public function product()
     {
-        return $this->belongsTo(Product::class); 
+        return $this->belongsTo(Product::class);
     }
 
     public function scopeDueDate($query){
@@ -27,7 +30,7 @@ class Order extends Model
     }
 
     public function scopeNewestFirst($query){
-        return $query->orderBy('created_at', 'DESC'); 
+        return $query->orderBy('created_at', 'DESC');
     }
 
 }

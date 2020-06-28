@@ -25,8 +25,8 @@ class ProductRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'price'=>'required | numeric',
-            'lawson_number'=>'required' 
+            'price'=>'nullable | numeric',
+            'lawson_number'=>'nullable'
         ];
     }
 }
